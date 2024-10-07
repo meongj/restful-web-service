@@ -1,9 +1,11 @@
 package com.in28minutes.rest.webservices.restful_web_services.filtering;
 
+import com.fasterxml.jackson.annotation.JsonFilter;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import net.minidev.json.annotate.JsonIgnore;
 
-@JsonIgnoreProperties({"field1", "field2"}) // json 무시
+//@JsonIgnoreProperties({"field1", "field2"}) // json 무시
+@JsonFilter("SomeBeanFilter")
 public class SomeBean {
     private String field1;
     @JsonIgnore // 응답으로 얘는 안보임
